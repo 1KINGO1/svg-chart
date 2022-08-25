@@ -1,0 +1,11 @@
+.wrapper{
+  border: 2px solid black;
+  display: inline-block;
+}
+
+.circle{
+  cursor: pointer;
+  transition: 0.1s ease all;
+  position: relative;
+  border: 10px solid transparent;
+}

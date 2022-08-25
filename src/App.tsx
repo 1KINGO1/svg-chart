@@ -1,24 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Chart from './components/Chart/Chart';
+
+const chartData = [
+  {
+    // If title isn't defined => title = value
+    value: 10,
+  },
+  {
+    value: 100,
+  },
+  {
+    value: 49,
+  },
+  {
+    value: 123,
+  },
+  {
+    value: 10,
+  },
+]
 
 function App() {
+
+  const clickHandler = (value: string | number, title: string | number) => {
+    console.log(`${title} - ${value}`);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Chart width={1000} height={500} data={chartData} onClick={clickHandler}/>
     </div>
   );
 }
