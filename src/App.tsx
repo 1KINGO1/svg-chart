@@ -18,6 +18,12 @@ const chartData = [
   {
     value: 10,
   },
+  {
+    value: 150,
+  },
+  {
+    value: 29,
+  },
 ]
 
 function App() {

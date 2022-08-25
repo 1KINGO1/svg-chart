@@ -43,7 +43,7 @@ class Chart {
 
   }
 
-  getLines(): { x1: number, y1: number, x2: number, y2: number }[] {
+  getLines(){
     const lines: { x1: number, y1: number, x2: number, y2: number }[] = [];
 
     let lastLineX = this.paddingX;
@@ -59,7 +59,7 @@ class Chart {
     return lines;
   }
 
-  getCircles(): { x: number, y: number, title: string | number, value: number | string }[] {
+  getCircles(){
     let circles: { x: number, y: number, title: string | number, value: number | string }[] = new Array(this.data.length).fill(null);
 
     circles = circles.map((circle, index) => (
@@ -74,7 +74,7 @@ class Chart {
     return circles;
   }
 
-  getVerticalAxes(): { x: number }[] {
+  getVerticalAxes(){
     return new Array(Math.ceil((this.width - 2 * this.paddingX) / this.forOneLineX + 1))
       .fill(null)
       .map((axis, index) => ({x: this.paddingX + this.forOneLineX  * index}));
