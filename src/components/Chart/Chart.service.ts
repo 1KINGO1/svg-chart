@@ -13,6 +13,8 @@ interface ChartConstructor{
   }
 }
 
+// Comment
+
 class Chart {
 
   private readonly width: number;
@@ -49,7 +51,7 @@ class Chart {
     let lastLineX = this.paddingX;
     let lastLineY = +this.height - this.paddingY;
 
-    this.data.forEach((field,  index) => {
+    this.data.forEach((field) => {
       let yValue = this.height - (+field.value * this.valueCoefficient) - this.paddingY;
       lines.push({x1: lastLineX, y1: lastLineY, x2: lastLineX + this.forOneLineX, y2: yValue});
       lastLineX += this.forOneLineX
